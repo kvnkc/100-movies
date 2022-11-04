@@ -18,3 +18,7 @@ for movie in movie_title:
     movies = movie.getText()
     movies_list.append(movies)
 reordered_movies_list = movies_list[::-1]
+
+with open('movies.txt', 'a', encoding='utf-8') as file:
+    for movie in reordered_movies_list:
+        file.write(f'{movie}\n')
